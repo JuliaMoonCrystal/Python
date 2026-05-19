@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoKenPo Elite - Pedra, Papel e Tesoura</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JO<span>KEN</span>PO</h1>
+            <div class="score-board">
+                <div class="score-card">
+                    <p>VOCÊ</p>
+                    <span id="user-score">0</span>
+                </div>
+                <div class="score-card">
+                    <p>CPU</p>
+                    <span id="cpu-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="game-status">Escolha sua jogada para começar!</div>
+            
+            <div class="battlefield">
+                <div class="choice-display" id="user-choice-display">
+                    <img id="user-img" src="" alt="">
+                </div>
+                <div class="vs">VS</div>
+                <div class="choice-display" id="cpu-choice-display">
+                    <img id="cpu-img" src="" alt="">
+                </div>
+            </div>
+
+            <div class="choices" id="choices-container">
+                <button class="choice-btn" id="rock" onclick="playGame('rock')">
+                    <img src="rock.png" alt="Pedra">
+                    <span>PEDRA</span>
+                </button>
+                <button class="choice-btn" id="paper" onclick="playGame('paper')">
+                    <img src="paper.png" alt="Papel">
+                    <span>PAPEL</span>
+                </button>
+                <button class="choice-btn" id="scissors" onclick="playGame('scissors')">
+                    <img src="scissors.png" alt="Tesoura">
+                    <span>TESOURA</span>
+                </button>
+            </div>
+
+            <div class="controls">
+                <button id="reset-btn" onclick="resetGame()">REINICIAR PLACAR</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
